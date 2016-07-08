@@ -53,8 +53,8 @@ var lightbox = $('.gallery a').simpleLightbox(options);
 ### Events
 | Name | Description |
 | ---- | ----------- |
-| open.simplelightbox | this event fires before the lightbox opens |
-| opened.simplelightbox | this event fires after the lightbox was opened |
+| show.simplelightbox | this event fires before the lightbox opens |
+| shown.simplelightbox | this event fires after the lightbox was opened |
 | close.simplelightbox | this event fires before the lightbox closes |
 | closed.simplelightbox | this event fires after the lightbox was closed |
 | change.simplelightbox | this event fires before image changes |
@@ -86,6 +86,7 @@ $('.gallery a').on('error.simplelightbox', function (e) {
 | next | Go to next image |
 | prev | Go to previous image |
 | destroy | Destroys the instance of  the lightbox |
+| refresh | Destroys and reinitilized the lightbox, needed for eg. Ajax Calls, or after dom manipulations |
 
 **Example**  
 ```javascript
@@ -102,6 +103,7 @@ var lightbox2 = $('.lighbox-2 a').simpleLightbox();
 ```
 
 ### Changelog
+**1.8.6 - Implemented feature-request #46, added refresh method**  
 **1.8.5 - Implemented feature-request #44**  
 **1.8.4 - Bugfix for #41 and added option for additional html inside images #40**  
 **1.8.3 - Bugfix for #38 and small other fix for loop false option**  
